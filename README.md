@@ -7,7 +7,9 @@ need: Tomcat, MySql (encoding DB – UTF-8), Maven
 build, run junit tests and deploy: from command line in Test run:
 
 mvn -pl TestDTO package
+
 mvn -pl TestREST tomcat7:deploy
+
 mvn -pl TestWEB tomcat7:deploy
 
 testing:
