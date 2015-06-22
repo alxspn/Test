@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>TestRESTFULL</groupId>
+    <artifactId>Test</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>TestDTO</artifactId>
+  <name>TestDTO</name>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  <build>
+    <directory>target</directory>
+    <outputDirectory>target/classes</outputDirectory>
+    <finalName>testdto-1.0</finalName>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <plugins>
+  	<plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>2.6</version>
+         <executions>
+          <execution>      
+         <goals>
+               <goal>jar</goal>
+          </goals>
+      	</execution>
+        </executions>
+     </plugin>
+     
+     <plugin>
+      <artifactId>maven-antrun-plugin</artifactId>
+      <version>1.4</version>
+      <executions>
+        <execution>
+          <id>copy</id>
+          <phase>package</phase>
+          <configuration>
+            <tasks>
+              <copy file="target/testdto-1.0.jar" tofile="../TestWEB/lib/by/testdto/1.0/testdto-1.0.jar"/>
+              <copy file="target/testdto-1.0.jar" tofile="../TestREST/lib/by/testdto/1.0/testdto-1.0.jar"/>
+            </tasks>
+          </configuration>
+          <goals>
+            <goal>run</goal>
+          </goals>
+        </execution> 
+      </executions>
+    </plugin>
+     
+  </plugins>
+  </build>
+</project>

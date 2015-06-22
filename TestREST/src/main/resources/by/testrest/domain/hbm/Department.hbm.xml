@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping 
+	PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" 
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+<hibernate-mapping package="by.testrest.domain">
+
+  <class name="Department" table = "departments">
+	<id name="id" type="long">
+		<column name="id" />
+		<generator class="increment" />
+	</id>
+	
+   	<property name="name"/>
+  	
+ 	<set name="employers" lazy="true" cascade="all">
+		<key column="department" />
+		<one-to-many class="Employee" />
+	</set>
+
+  </class>
+
+</hibernate-mapping>

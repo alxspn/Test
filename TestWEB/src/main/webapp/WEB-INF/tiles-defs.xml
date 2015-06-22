@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">      
+
+<tiles-definitions>
+
+ 	<definition name=".main" template="/WEB-INF/jspx/MainTemplate.jsp" >
+		<put-attribute name="title" value=""  type="string"/>
+		<put-attribute name="header" value="/WEB-INF/jspx/Header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jspx/Footer.jsp" />
+	</definition>
+	
+	<definition name="Departments" extends=".main" >
+		<put-attribute name="title" value= "Отделы"  type="string"/>
+		<put-attribute name="content" value="/WEB-INF/jsp/Departments.jsp" />
+	</definition>
+	
+	<definition name="Employers" extends=".main" >
+		<put-attribute name="title" value= "Сотрудники"  type="string"/>
+		<put-attribute name="content" value="/WEB-INF/jsp/Employers.jsp" />
+	</definition>
+
+</tiles-definitions>
