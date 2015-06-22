@@ -4,6 +4,8 @@ Build and run:
 
 need: Tomcat, MySql (encoding DB – UTF-8), Maven
 
+сhange in Test/TestREST/src/main/webapp/WEB-INF/jdbc.properties properties "jdbc.username" and "jdbc.password" (default- "root" and "mysqlpsw")
+
 build, run junit tests and deploy: from command line in Test run:
 
 mvn -pl TestDTO package
