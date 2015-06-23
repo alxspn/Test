@@ -7,6 +7,9 @@
   http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd
   http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
+	<context:component-scan base-package="by.testrest.controllers" />
+	<mvc:annotation-driven />
+
 	<!-- 
 			configuration file for dataSource bean
 	 -->
@@ -93,4 +96,9 @@
 			</props>
 		</property>
 	</bean>
+	
+	
+	<bean id="departmentControllerTest" class="DepartmentControllerTest"/>
+	<bean id="employeeControllerTest" class="EmployeeControllerTest"/>
+	
 </beans>
